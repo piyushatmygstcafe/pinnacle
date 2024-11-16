@@ -21,6 +21,13 @@ frappe.ui.form.on("Pay Slips", {
 		);
 		calculate_gross(frm);
 	},
+	early_checkout_working_days: function (frm) {
+		frm.set_value(
+			"early_checkout_working_amount",
+			frm.doc.early_checkout_working_days * frm.doc.early_checkout_working_rate * 0.9
+		);
+		calculate_gross(frm);
+	},
 	quarter_day_working_days: function (frm) {
 		frm.set_value(
 			"quarter_day_working_amount",
@@ -81,6 +88,9 @@ frappe.ui.form.on("Pay Slips", {
 	other_ernings_holidays_amount: function (frm) {
 		setOthersEarningAmount(frm);
 	},
+	other_ernings_overtime_amount: function (frm) {
+		setOthersEarningAmount(frm);
+	},
 
 	other_earnings_amount: function (frm) {
 		calculate_net_payable(frm);
@@ -120,6 +130,7 @@ frappe.ui.form.on("Pay Slips", {
 function calculate_gross(frm) {
 	let total =
 		(frm.doc.full_day_working_amount || 0) +
+		(frm.doc.early_checkout_working_amount || 0) +
 		(frm.doc.quarter_day_working_amount || 0) +
 		(frm.doc.half_day_working_amount || 0) +
 		(frm.doc.three_four_quarter_days_working_amount || 0) -
@@ -142,7 +153,7 @@ function setOthersEarningAmount(frm) {
 	let otherEarningsAmount =
 		(frm.doc.other_ernings_holidays_amount || 0) +
 		(frm.doc.other_earnings_incentives || 0) +
-		(frm.doc.other_earning_project_deadline_allowance || 0) +
+		(frm.doc.other_ernings_overtime_amount || 0) +
 		(frm.doc.other_earnings_special_incentives || 0) +
 		(frm.doc.other_earnings_leave_encashent || 0);
 	frm.set_value("other_earnings_amount", otherEarningsAmount);

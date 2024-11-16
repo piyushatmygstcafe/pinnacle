@@ -34,6 +34,16 @@
   "full_day_working_effective_percent",
   "column_break_drah",
   "full_day_working_amount",
+  "early_checkout_working_section",
+  "early_checkout_working_days",
+  "column_break_umfx",
+  "early_checkout_working_rate",
+  "column_break_jtx8",
+  "early_checkout_working_total",
+  "column_break_4doj",
+  "early_checkout_working_effective_percentage",
+  "column_break_3dkh",
+  "early_checkout_working_amount",
   "quarter_day_working",
   "quarter_day_working_days",
   "column_break_2v9e",
@@ -89,12 +99,12 @@
   "sunday_working_amount",
   "other_earnings_section",
   "other_earnings_incentives",
-  "column_break_euil",
-  "other_earning_project_deadline_allowance",
   "column_break_fcpa",
   "other_earnings_special_incentives",
   "column_break_lm7i",
   "other_earnings_leave_encashent",
+  "other_ernings_overtime_amount_cl_brake",
+  "other_ernings_overtime_amount",
   "column_break_buem",
   "other_ernings_holidays_amount",
   "column_break_cgrd",
@@ -248,7 +258,8 @@
    "default": "100",
    "fieldname": "full_day_working_effective_percent",
    "fieldtype": "Percent",
-   "label": "Effective Percent"
+   "label": "Effective Percent",
+   "precision": "0"
   },
   {
    "fieldname": "column_break_drah",
@@ -299,7 +310,8 @@
    "default": "75",
    "fieldname": "quarter_day_working_effective_percent",
    "fieldtype": "Percent",
-   "label": "Effective Percent "
+   "label": "Effective Percent ",
+   "precision": "0"
   },
   {
    "fieldname": "column_break_bbrb",
@@ -350,7 +362,8 @@
    "default": "50",
    "fieldname": "half_day_working_effective_percent",
    "fieldtype": "Percent",
-   "label": "Effective Percent"
+   "label": "Effective Percent",
+   "precision": "0"
   },
   {
    "fieldname": "column_break_09uz",
@@ -401,7 +414,8 @@
    "default": "25",
    "fieldname": "three_four_quarter_days_working_effective_percent",
    "fieldtype": "Percent",
-   "label": "Effective Percent"
+   "label": "Effective Percent",
+   "precision": "0"
   },
   {
    "fieldname": "column_break_clqz",
@@ -452,7 +466,8 @@
    "default": "10",
    "fieldname": "lates_effective_paercent",
    "fieldtype": "Percent",
-   "label": "Effective Percent"
+   "label": "Effective Percent",
+   "precision": "0"
   },
   {
    "fieldname": "column_break_clkt",
@@ -519,7 +534,8 @@
    "default": "100",
    "fieldname": "sundays_working_effective_perent",
    "fieldtype": "Currency",
-   "label": "Effective Percent"
+   "label": "Effective Percent",
+   "precision": "0"
   },
   {
    "fieldname": "column_break_pnem",
@@ -541,16 +557,6 @@
    "fieldname": "other_earnings_incentives",
    "fieldtype": "Currency",
    "label": "Incentives"
-  },
-  {
-   "fieldname": "column_break_euil",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "other_earning_project_deadline_allowance",
-   "fieldtype": "Currency",
-   "label": "Project Deadline Allowance"
   },
   {
    "fieldname": "column_break_fcpa",
@@ -623,11 +629,68 @@
    "fieldname": "net_payble_amount",
    "fieldtype": "Currency",
    "label": "Total Monthly Salary + Sundays Working + Other Earnings - Adjustments"
+  },
+  {
+   "fieldname": "other_ernings_overtime_amount",
+   "fieldtype": "Currency",
+   "label": "Overtime Amount"
+  },
+  {
+   "fieldname": "other_ernings_overtime_amount_cl_brake",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "early_checkout_working_section",
+   "fieldtype": "Section Break",
+   "label": "Early Checkout Working"
+  },
+  {
+   "fieldname": "column_break_umfx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jtx8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4doj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_3dkh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "early_checkout_working_days",
+   "fieldtype": "Int",
+   "label": "Days"
+  },
+  {
+   "fieldname": "early_checkout_working_rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "early_checkout_working_total",
+   "fieldtype": "Int",
+   "label": "Total"
+  },
+  {
+   "default": "90",
+   "fieldname": "early_checkout_working_effective_percentage",
+   "fieldtype": "Percent",
+   "label": "Efective Percentage",
+   "precision": "0"
+  },
+  {
+   "fieldname": "early_checkout_working_amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-28 12:41:42.817141",
+ "modified": "2024-11-08 17:44:01.888857",
  "modified_by": "Administrator",
  "module": "PinnacleHRMS",
  "name": "Pay Slips",

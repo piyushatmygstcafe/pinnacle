@@ -14,7 +14,8 @@ import pinnacle.pinnacleglobals.override_auth
 
 fixtures = [
     {'dt': 'Print Format', 'filters': [['name', 'in', ['Pay Slip Format']]]},
-    {'dt':'Custom Field','filters':[['name','in',['Employee Checkin-custom_comment']]]}
+    {'dt':'Custom Field','filters':[['name','in',['Employee Checkin-custom_comment']]]},
+    {'dt':'Workspace','filters':[['name','in',['Employee Dashboard']]]}
 ]
 
 # Each item in the list will be shown as an app in the apps page
@@ -144,13 +145,14 @@ fixtures = [
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# }
+ 
+}
 
 # Scheduled Tasks
 # ---------------
